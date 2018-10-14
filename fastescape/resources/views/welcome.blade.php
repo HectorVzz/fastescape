@@ -16,9 +16,18 @@
     <!-- Custom styles for this template -->
     <link href="css/business-frontpage.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
 
     <script src="js/funciones.js"></script>
+
+    <script type="text/javascript" src="js/libs/three/three.js"></script>
+
+	  <script type="text/javascript" src="js/libs/three/three.js"></script>
+	
+  
+ 
+
+
 
   </head>
 
@@ -44,16 +53,15 @@
       </div>
     </nav>
 
-    <!-- Header with Background Image -->
-    <header class="business-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <h1 class="display-3 text-center text-white mt-4">Business Name or Tagline</h1>
+    <!-- Div donde se insertera el canvas para el juego. -->
+
+    <button id="jugar">Iniciar Juego</button>
+          
+          <div id="scene-section"  >
           </div>
-        </div>
-      </div>
-    </header>
+        
+
+  
 
     <!-- Page Content -->
     <div class="container">
@@ -73,9 +81,25 @@
          <br>
          <div>
 
-         <button class="btn btn-primary opcion" id="resolucion">Resolucion</button> 
+       
+         <div class="dropdown show opcion" id="resolucion">
+            <a class="btn btn-secondary dropdown-toggle" href="javascript:void(0)" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             Resolucion
+            </a>
+          
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" id="resolucion1" href="javascript:void(0)">1300 x 700</a>
+              <a class="dropdown-item" id="resolucion2" href="#">800 x 600</a>
+              <a class="dropdown-item" id="resolucion3" href="#">600 x 400</a>
+            </div>
+          </div>
 
-        <button class="btn btn-primary opcion" id="sonido">Sonido</button> 
+          <div class="opcion">
+            <div>Sonido</div>
+            <div class="slidecontainer opcion">
+              <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+            </div>
+        </div>
       </div>
 
         </div>
@@ -145,5 +169,8 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
-
+<script>
+function myFunction() {
+  alert("You pressed a key inside the input field");
+}</script>
 </html>
